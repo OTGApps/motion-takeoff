@@ -77,9 +77,9 @@ The `MotionTakeoff::Reminders.schedule` method takes a hash of options that are 
 }
 ```
 
-You can read about what each of these does in [Apple's UILocalNotification Documentation](https://developer.apple.com/library/IOs/documentation/iPhone/Reference/UILocalNotification_Class/Reference/Reference.html), but I've tried to pick sane defaults.
+You can read about what each of these does in Apple's `UILocalNotification` Documentation, but I've implemented all of Apple's defaults that you can override if needed.
 
-If you pass a `NSCalendarUnit` for the `repeat` option, we'll automatically assume you want to use `NSCalendar.currentCalendar` as the repeat calendar. Possible values of `repeat` are as found in the [`NSCalendarUnit` documentation](https://developer.apple.com/library/IOs/documentation/Cocoa/Reference/Cocoa/Reference/Foundation/Classes/NSCalendar_Class/Reference/NSCalendar.html#//apple_ref/doc/c_ref/NSCalendarUnit).
+If you pass a `NSCalendarUnit` for the `repeat` option, we'll automatically assume you want to use `NSCalendar.currentCalendar` as the repeat calendar. Possible values of `repeat` are as found in the `NSCalendarUnit` documentation.
 
 ## Future plans
 
