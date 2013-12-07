@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mark Rickert"]
   spec.email         = ["mjar81@gmail.com"]
   spec.description   = %q{A RubyMotion specific iOS gem that helps you do things at launch.}
-  spec.summary       = %q{A RubyMotion specific iOS gem that helps you do things at launch. You can use this gem to display messages at certain launch counts.}
+  spec.summary       = %q{A RubyMotion specific iOS gem that helps you do things at launch. You can use this gem to display messages at certain launch counts and remind users to use your app.}
   spec.homepage      = "https://www.github.com/MohawkApps/motion-takeoff"
   spec.license       = "MIT"
 
