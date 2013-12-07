@@ -110,5 +110,5 @@ describe "Reminders Spec" do
     notification.soundName.should == sound
   end
 
-  #TODO: Add more specs!
+  #TODO: Add more tests!
 end
