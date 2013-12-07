@@ -1,4 +1,4 @@
-# motion-takeoff
+# motion-takeoff [![Build Status](https://travis-ci.org/MohawkApps/motion-takeoff.png)](https://travis-ci.org/MohawkApps/motion-takeoff) [![Code Climate](https://codeclimate.com/github/MohawkApps/motion-takeoff.png)](https://codeclimate.com/github/MohawkApps/motion-takeoff)
 
 A RubyMotion specific iOS gem that helps you do things at launch. Currently, there is two one modules in this gem: `Messages` & `Reminders.
 
