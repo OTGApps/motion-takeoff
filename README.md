@@ -59,7 +59,7 @@ def applicationDidEnterBackground(application)
 end
 ```
 
-The `Takeoff::Reminders.schedule` method takes a hash of options that are send to the `UILocalNotification`. `body` and `fire_date` are required and will raise an exception if you try to schedule a notification without those teo options. Here's all the default options:
+The `Takeoff::Reminders.schedule` method takes a hash of options that are send to the `UILocalNotification`. `body` and `fire_date` are required and will raise an exception if you try to schedule a notification without those two options. Here's all the default options:
 
 ```ruby
 {
