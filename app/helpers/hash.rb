@@ -20,4 +20,13 @@ class Hash
     keys.each { |key| delete(key) }
     self
   end
+
+  # Returns the hash back with all the :symbols for keys turned into "strings"
+  def stringify_keys
+    new_hash = {}
+    self.keys.each do |key|
+      new_hash[(key.to_s rescue key) || key] = self[key]
+    end
+    new_hash
+  end
 end

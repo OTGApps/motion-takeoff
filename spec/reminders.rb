@@ -99,7 +99,7 @@ describe "Reminders Spec" do
     notification.repeatInterval.should == NSMinuteCalendarUnit
   end
 
-  it "should set a sound file anme" do
+  it "should set a sound file name" do
     sound = "alert"
     MotionTakeoff::Reminders.schedule(
       body: @body,
@@ -108,6 +108,17 @@ describe "Reminders Spec" do
     )
     notification = UIApplication.sharedApplication.scheduledLocalNotifications.first
     notification.soundName.should == sound
+  end
+
+  it "should set the user_info object" do
+    user_info = {name: "Mark Rickert", project: "motion-takeoff"}
+    MotionTakeoff::Reminders.schedule(
+      body: @body,
+      fire_date: Time.now + 10,
+      user_info: user_info
+    )
+    notification = UIApplication.sharedApplication.scheduledLocalNotifications.first
+    notification.userInfo.should == user_info.stringify_keys
   end
 
   #TODO: Add more tests!
