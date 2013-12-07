@@ -3,7 +3,7 @@ require File.expand_path('../lib/project/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "motion-takeoff"
-  spec.version       = MotionTakeoff::VERSION
+  spec.version       = Takeoff::VERSION
   spec.authors       = ["Mark Rickert"]
   spec.email         = ["mjar81@gmail.com"]
   spec.description   = %q{A RubyMotion specific iOS gem that helps you do things at launch.}

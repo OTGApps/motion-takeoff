@@ -1,4 +1,4 @@
-module MotionTakeoff
+module Takeoff
   class Reminders
 
     def self.schedule (opts)

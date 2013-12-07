@@ -22,7 +22,7 @@ Open your app delegate and in your `applicationDidBecomeActive:` method do somet
 
 ```ruby
 def applicationDidBecomeActive(application)
-  messages = MotionTakeoff::Messages.new
+  messages = Takeoff::Messages.new
   messages.schedule launch:1, title:"Welcome to #{App.name}!", message:"Thanks for checking it out!"
   messages.schedule launch:3, title:"Quick Tip:", message:"This is the 3rd time you've launched this application!"
   messages.schedule launch:500, title:"Quick Tip:", message:"This is the 500th time you've launched this application!"
@@ -39,7 +39,7 @@ You should always reset all local notifications when your app becomes active:
 
 ```ruby
 def applicationDidBecomeActive(application)
-  MotionTakeoff::Reminders.reset
+  Takeoff::Reminders.reset
 end
 ```
 
@@ -47,19 +47,19 @@ And here's how to set multiple reminders when your app enters the background:
 
 ```ruby
 def applicationDidEnterBackground(application)
-  MotionTakeoff::Reminders.schedule(
+  Takeoff::Reminders.schedule(
     body: "Fires 20 seconds after the user closes your app.",
     fire_date: 20 #seconds
   )
 
-  MotionTakeoff::Reminders.schedule(
+  Takeoff::Reminders.schedule(
     body: "Fires 10 seconds later.",
     fire_date: Time.now + 30 #Time object in the future
   )
 end
 ```
 
-The `MotionTakeoff::Reminders.schedule` method takes a hash of options that are send to the `UILocalNotification`. `body` and `fire_date` are required and will raise an exception if you try to schedule a notification without those teo options. Here's all the default options:
+The `Takeoff::Reminders.schedule` method takes a hash of options that are send to the `UILocalNotification`. `body` and `fire_date` are required and will raise an exception if you try to schedule a notification without those teo options. Here's all the default options:
 
 ```ruby
 {

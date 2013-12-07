@@ -1,4 +1,4 @@
-module MotionTakeoff
+module Takeoff
   class Messages
     attr_accessor :messages
 
