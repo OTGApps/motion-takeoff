@@ -23,9 +23,9 @@ Open your app delegate and in your `applicationDidBecomeActive:` method do somet
 ```ruby
 def applicationDidBecomeActive(application)
   messages = MotionTakeoff::Messages.new
-  messages.message launch:1, title:"Welcome to #{App.name}!", message:"Thanks for checking it out!"
-  messages.message launch:3, title:"Quick Tip:", message:"This is the 3rd time you've launched this application!"
-  messages.message launch:500, title:"Quick Tip:", message:"This is the 500th time you've launched this application!"
+  messages.schedule launch:1, title:"Welcome to #{App.name}!", message:"Thanks for checking it out!"
+  messages.schedule launch:3, title:"Quick Tip:", message:"This is the 3rd time you've launched this application!"
+  messages.schedule launch:500, title:"Quick Tip:", message:"This is the 500th time you've launched this application!"
   messages.takeoff
 end
 ```

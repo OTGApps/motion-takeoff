@@ -1,18 +1,23 @@
 module MotionTakeoff
   class Messages
+    attr_accessor :messages
 
     def initialize
-      @messages = []
+      self.messages = []
       @launch_key = 'motion_takeoff_launch_count'
       handle_launch
     end
 
-    def message(opts={})
-      @messages << opts
+    def schedule(opts={})
+      raise "You must specify a :launch" unless opts[:launch]
+      raise "You must specify a :title" unless opts[:title]
+      raise "You must specify a :message" unless opts[:message]
+
+      self.messages << opts
     end
 
     def takeoff
-      @messages.each do |message|
+      self.messages.each do |message|
         if message[:launch] == App::Persistence[@launch_key]
           App.alert(message[:title], message:message[:message])
         end
