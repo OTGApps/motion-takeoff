@@ -29,7 +29,25 @@ def applicationDidBecomeActive(application)
   messages.takeoff
 end
 ```
+
 This will display an alert to the user on the 1st, 3rd, and 500th launches of the app.
+
+### Asking for confirmation
+
+You can use the Messages module to ask a user to do something. Just pass a `Proc` object to the `:action` option. You can send an array of strings using `:buttons` but it will default to `["Cancel", "OK"]`. When the user presses the "OK" button, the `Proc` will run.
+
+```ruby
+def applicationDidBecomeActive(application)
+  messages = Takeoff::Messages.new
+  messages.schedule(
+    launch: 1,
+    title: "Welcome to #{App.name}!", 
+    message: "So you want to view the settings?"
+    action: Proc.new{ App.delegate.viewController.showSettings }
+  )
+  messages.takeoff
+end
+```
 
 ## Usage: Reminder Module
 

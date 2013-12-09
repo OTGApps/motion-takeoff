@@ -19,12 +19,35 @@ module Takeoff
     def takeoff
       self.messages.each do |message|
         if message[:launch] == App::Persistence[@launch_key]
-          App.alert(message[:title], message:message[:message])
+          if message.keys.include? :action
+            confirm_alert message
+          else
+            regular_alert message
+          end
         end
       end
     end
 
     private
+
+    def regular_alert message
+      App.alert(message[:title], message:message[:message])
+    end
+
+    def confirm_alert message
+      message = {
+        :buttons => ["Cancel", "OK"]
+      }.merge(message)
+
+      alert = BW::UIAlertView.default(message) do |alert|
+        if alert.clicked_button.title == "OK"
+          message[:action].call
+        end
+      end
+
+      alert.show
+    end
+
     def handle_launch
       if App::Persistence[@launch_key].nil?
         App::Persistence[@launch_key] = 1
