@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = Takeoff::VERSION
   spec.authors       = ["Mark Rickert"]
   spec.email         = ["mjar81@gmail.com"]
-  spec.description   = %q{A RubyMotion specific iOS gem that helps you do things at launch.}
-  spec.summary       = %q{A RubyMotion specific iOS gem that helps you do things at launch. You can use this gem to display messages at certain launch counts and remind users to use your app.}
+  spec.description   = %q{A RubyMotion specific iOS gem for scheduling stuff.}
+  spec.summary       = %q{A RubyMotion specific iOS gem for scheduling stuff. You can use motion-takeoff to display messages at certain launch counts and schedule local notifications.}
   spec.homepage      = "https://www.github.com/MohawkApps/motion-takeoff"
   spec.license       = "MIT"
 
