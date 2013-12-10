@@ -71,7 +71,7 @@ def applicationDidEnterBackground(application)
   )
 
   Takeoff::Reminders.schedule(
-    body: "Fires 10 seconds later.",
+    body: "Fires 10 seconds after the first notification.",
     fire_date: Time.now + 30 #Time object in the future
   )
 end
