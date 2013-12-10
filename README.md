@@ -1,5 +1,7 @@
 # motion-takeoff [![Build Status](https://travis-ci.org/MohawkApps/motion-takeoff.png)](https://travis-ci.org/MohawkApps/motion-takeoff) [![Code Climate](https://codeclimate.com/github/MohawkApps/motion-takeoff.png)](https://codeclimate.com/github/MohawkApps/motion-takeoff) [![Gem Version](https://badge.fury.io/rb/motion-takeoff.png)](http://badge.fury.io/rb/motion-takeoff)
 
+[![Support via Gittip](https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png)](https://www.gittip.com/markrickert/)
+
 A RubyMotion specific iOS gem for scheduling stuff. You can use motion-takeoff to display messages at certain launch counts and schedule local notifications. Currently, there are two modules in this gem: `Messages` & `Reminders`.
 
 The `Messages` module will allow you to schedule alerts to users at certain launch counts.
