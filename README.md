@@ -112,6 +112,3 @@ I'd like it to be able to be a multi-purpose tool for doing things at launch oth
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
----
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/MohawkApps/motion-takeoff/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
