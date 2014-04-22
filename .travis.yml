@@ -1,4 +1,10 @@
 language: objective-c
 gemfile:
   - Gemfile
+before_install:
+  - brew update
+  - brew upgrade xctool
+  - sudo motion update
+  - sudo chown -R travis ~/Library/RubyMotion
+  - mkdir -p ~/Library/RubyMotion/build
 script: bundle exec rake spec
