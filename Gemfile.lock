@@ -1,14 +1,16 @@
 PATH
   remote: .
   specs:
-    motion-takeoff (0.0.4)
+    motion-takeoff (0.0.5)
       bubble-wrap (> 1.0.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    bubble-wrap (1.4.0)
-    rake (10.1.0)
+    bubble-wrap (1.7.1)
+      bubble-wrap-http (= 1.7.1)
+    bubble-wrap-http (1.7.1)
+    rake (10.3.2)
 
 PLATFORMS
   ruby
