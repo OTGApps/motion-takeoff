@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    motion-takeoff (0.0.5)
+    motion-takeoff (0.0.6)
       bubble-wrap (> 1.0.0)
 
 GEM
