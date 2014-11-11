@@ -55,6 +55,14 @@ end
 
 The reminders module is a nice wrapper on `UILocalNotification` and makes it easy to schedule reminders to come back and use your app!
 
+iOS 8 requires that you ask the user for permission to send notifications:
+
+```ruby
+def application(application, didFinishLaunchingWithOptions:launchOptions)
+  Takeoff::Reminders.setup
+end
+```
+
 You should always reset all local notifications when your app becomes active:
 
 ```ruby
