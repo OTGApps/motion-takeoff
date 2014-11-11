@@ -1,6 +1,7 @@
 describe "Reminders Spec" do
 
   before do
+    Takeoff::Reminders.setup
     Takeoff::Reminders.reset
     @default = {
       body: "Specs are awesome",

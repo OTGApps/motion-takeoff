@@ -2,6 +2,16 @@ module Takeoff
   class Reminders
 
     class << self
+      def setup
+        if Device.ios_version >= "8.0"
+          types = UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert
+          notificationSettings = UIUserNotificationSettings.settingsForTypes(types, categories:nil)
+          UIApplication.sharedApplication.registerUserNotificationSettings(notificationSettings)
+        else
+          UIApplication.sharedApplication.registerForRemoteNotificationTypes((UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert))
+        end
+      end
+
       def schedule (opts)
         raise "You must specify a :body" unless opts[:body]
         raise "You must specify a :fire_date" unless opts[:fire_date]
