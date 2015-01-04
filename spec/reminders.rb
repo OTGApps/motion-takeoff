@@ -85,5 +85,17 @@ describe "Reminders Spec" do
     notification.userInfo.should == user_info.stringify_keys
   end
 
+  it "should report number of notifications" do
+    Takeoff::Reminders.schedule(@default)
+    count = UIApplication.sharedApplication.scheduledLocalNotifications.count
+    Takeoff::Reminders.count.should == count
+  end
+
+  it "should expose notifications" do
+    Takeoff::Reminders.schedule(@default)
+    notification = Takeoff::Reminders.notifications.first
+    notification.alertBody.should == "Specs are awesome"
+  end
+
   #TODO: Add more tests!
 end
