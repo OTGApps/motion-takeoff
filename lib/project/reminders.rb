@@ -65,6 +65,14 @@ module Takeoff
           app.cancelAllLocalNotifications
         end
       end
+
+      def count
+        UIApplication.sharedApplication.scheduledLocalNotifications.count
+      end
+
+      def notifications
+        UIApplication.sharedApplication.scheduledLocalNotifications
+      end
     end
   end
 end
