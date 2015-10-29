@@ -97,5 +97,10 @@ describe "Reminders Spec" do
     notification.alertBody.should == "Specs are awesome"
   end
 
+  it "should return notifications after scheduling them" do
+    reminder = Takeoff::Reminders.schedule(@default)
+    reminder.should == Takeoff::Reminders.notifications.first
+  end
+
   #TODO: Add more tests!
 end

@@ -57,6 +57,8 @@ module Takeoff
           notif.userInfo = opts[:user_info]
         end
         UIApplication.sharedApplication.scheduleLocalNotification notification
+
+        notification
       end
 
       def reset
@@ -66,14 +68,17 @@ module Takeoff
         end
       end
 
+      def all
+        UIApplication.sharedApplication.scheduledLocalNotifications
+      end
+
       def count
-        UIApplication.sharedApplication.scheduledLocalNotifications.count
+        all.count
       end
 
       def notifications
-        UIApplication.sharedApplication.scheduledLocalNotifications
+        all
       end
     end
   end
 end
-
