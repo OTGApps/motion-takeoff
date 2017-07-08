@@ -3,7 +3,8 @@ module Takeoff
 
     class << self
       def setup
-        if Device.ios_version >= "8.0"
+        version_components = Device.ios_version.split '.'
+        if version_components[0].to_i >= 8
           types = UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert
           notificationSettings = UIUserNotificationSettings.settingsForTypes(types, categories:nil)
           UIApplication.sharedApplication.registerUserNotificationSettings(notificationSettings)
